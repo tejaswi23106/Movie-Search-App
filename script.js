@@ -1,5 +1,5 @@
-const OMDB_API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=.........";//give your omdb api here
-const YOUTUBE_API_KEY = "your youtube api";//your youtube api here 
+const OMDB_API_URL = "https://www.omdbapi.com/?apikey=YOUR_OMDB_API_KEY";
+const YOUTUBE_API_KEY = "YOUR_YOUTUBE_API_KEY"; 
 
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
