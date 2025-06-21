@@ -1,0 +1,156 @@
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f4f4f4, #e0f7fa, #f4f4f4); /* Soft gradient background */
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #00bcd4, #2196f3); /* Vibrant gradient */
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Layout */
+main {
+  padding: 2rem 1rem;
+}
+
+/* Search Section */
+.search-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-section input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  width: 60%;
+  max-width: 400px;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-section input:focus {
+  border-color: #2196f3;
+}
+
+.search-section button {
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-section button:hover {
+  background-color: #1976d2;
+}
+
+/* Movie Cards Grid */
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Individual Movie Card */
+.movie-card {
+  background: white;
+  border: none;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Poster Image */
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* Movie Info */
+.movie-card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem;
+  color: #212121;
+}
+
+.movie-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+/* Action Button */
+.movie-card button {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.875rem;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.movie-card button:hover {
+  background-color: #0097a7;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(to right, #2196f3, #00bcd4);
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Responsive Fix */
+@media (max-width: 500px) {
+  .search-section input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-section button {
+    width: 100%;
+  }
+
+  .movie-card {
+    width: 90%;
+  }
+}
