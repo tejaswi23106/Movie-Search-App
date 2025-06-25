@@ -36,21 +36,25 @@ function displayMovies(movies) {
   movies.forEach((movie) => {
     const movieCard = document.createElement("div");
     movieCard.classList.add("movie-card");
+
     movieCard.innerHTML = `
-      <img 
-        src="${movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg'}" 
-        alt="${movie.Title}" 
-        style="cursor:pointer"
-        onclick="openTrailer('${movie.Title}', '${movie.Year}')"
-      />
+      <div class="poster-container" id="poster-${movie.imdbID}">
+        <img 
+          src="${movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg'}" 
+          alt="${movie.Title}"
+        />
+      </div>
       <h3>${movie.Title}</h3>
       <p>${movie.Year}</p>
-      <button onclick="addToFavorites('${movie.imdbID}', '${movie.Title.replace("'", "\\" + "'")}', '${movie.Poster}', '${movie.Year}')">Add to Favorites</button>
+      <div class="button-group">
+        <button onclick="openTrailer('${movie.Title}', '${movie.Year}')">▶ Watch Trailer</button>
+        <button onclick="addToFavorites('${movie.imdbID}', '${movie.Title.replace("'", "\\'")}', '${movie.Poster}', '${movie.Year}')">Add to Favorites</button>
+      </div>
     `;
+
     movieResults.appendChild(movieCard);
   });
 }
-
 // 🔗 Fetch Trailer from YouTube Data API
 async function getTrailerVideoId(title, year) {
   const query = `${title} ${year} official trailer`;
